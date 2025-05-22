@@ -1,5 +1,4 @@
-%%%  experiment_SSKR: tr_data, te_data, rbf_bandwidth, lambda, max_label_size_ratio, max_iter %%%
-function [testing_fitted_y] = LDOF_fit(train_data, test_data, k, dist_train)
+function [testing_fitted_y] = scaled_K2_fit(train_data, test_data, k, dist_train)
 
 dist_test_to_train = pdist2(test_data, train_data);
 knn_set = knnsearch(train_data, test_data, 'K', k);
