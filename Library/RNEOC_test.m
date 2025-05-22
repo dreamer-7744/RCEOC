@@ -11,7 +11,7 @@ for i = 1:ensemble_size
     shrinked_test_data = test_data(:,tmp_feat);
     
     dist_train = squareform(pdist(shrinked_data));
-    [testing_fitted_y] = LDOF_fit(shrinked_data, shrinked_test_data, k, dist_train);
+    [testing_fitted_y] = scaled_K2_fit(shrinked_data, shrinked_test_data, k, dist_train);
     ensemble_testing_fitted_y(:,i) = testing_fitted_y;
     
 end;
